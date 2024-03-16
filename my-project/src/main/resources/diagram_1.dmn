@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" id="Service" name="Services" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.18.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.19.0">
+  <decision id="dayDecision" name="sample" camunda:versionTag="1.0.0" camunda:historyTimeToLive="3">
+    <decisionTable id="DecisionTable_0km0lvk">
+      <input id="Input_1" label="Day" camunda:inputVariable="Day">
+        <inputExpression id="InputExpression_1" typeRef="string" expressionLanguage="feel">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_082buwy" label="HeadCount" biodi:width="192" camunda:inputVariable="Count">
+        <inputExpression id="LiteralExpression_1dhvssi" typeRef="integer">
+          <text></text>
+        </inputExpression>
+      </input>
+      <output id="Output_1" label="Activity" name="createdBy" typeRef="string" />
+      <rule id="DecisionRule_02qh18v">
+        <inputEntry id="UnaryTests_0db3ys0">
+          <text>"Monday"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1cnzn9h">
+          <text>10</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1t43zvi">
+          <text>"Shopping"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1c4r49s">
+        <inputEntry id="UnaryTests_1j1iis0">
+          <text>"Tuesday"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0b7ysr7">
+          <text>12</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1gy96uh">
+          <text>"Cricket"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1n1m9gg">
+        <inputEntry id="UnaryTests_0cptir1">
+          <text>"Wednesday"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0q8yeyr">
+          <text>6</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0yymyzg">
+          <text>"Vollyball"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0hlxowp">
+        <inputEntry id="UnaryTests_1ks4m6t">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1n53qou">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1o89j27">
+          <text></text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="dayDecision">
+        <dc:Bounds height="80" width="180" x="160" y="100" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>
