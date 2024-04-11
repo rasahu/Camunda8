@@ -24,6 +24,8 @@ public class TaskServicesImpl implements TaskServices {
 		List<Task> taskList = taskService.createTaskQuery().list();
 		Map<String, TaskModel> taskMap = new HashMap<>();
 		List<Map<String, TaskModel>> as = new ArrayList<>();
+		
+		taskList.stream().iterator().forEachRemaining(null);
 		for (Task task : taskList) {
 			TaskModel taskModel = TaskModel.builder().taskId(task.getId()).taskName(task.getName())
 					.taskDescription(task.getDescription()).build();
