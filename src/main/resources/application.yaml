@@ -6,3 +6,4 @@ server:
 camunda.bpm.admin-user:
   id: Demo
   password: Demo
+  
