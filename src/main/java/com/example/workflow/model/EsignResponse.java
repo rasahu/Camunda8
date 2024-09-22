@@ -2,13 +2,14 @@ package com.example.workflow.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
-@Data
+
 @NoArgsConstructor
 @AllArgsConstructor
-public class GeneralResponse {
-	private int statusCode;
-	private String message;
-
+@Data
+@EqualsAndHashCode(callSuper=false)
+public class EsignResponse extends GeneralResponse{
+   private String packageId;
 }
